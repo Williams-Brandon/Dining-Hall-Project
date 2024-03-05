@@ -18,6 +18,7 @@ import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Link from 'next/link'
+import Badge from '@mui/material/Badge';
 import '@fontsource-variable/noto-sans-lisu';
 
 
@@ -29,7 +30,7 @@ const pages = ['About', 'Favorites', 'Cart'];
 const settings = ['Profile', 'Logout'];
 const isUserLoggedIn = true;
 
-function ResponsiveAppBar() {
+export default function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -54,6 +55,7 @@ function ResponsiveAppBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
+                        className='gourmet-gurus-text'
                         variant="h6"
                         noWrap
                         component="a"
@@ -61,7 +63,7 @@ function ResponsiveAppBar() {
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'Noto Sans Lisu Variable',
+                            fontFamily: 'Italiana',
                             fontWeight: 1000,
                             letterSpacing: '.3rem',
                             color: 'white',
@@ -109,8 +111,10 @@ function ResponsiveAppBar() {
                             ))}
                         </Menu>
                     </Box> */}
-                    <LocalDiningIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <LocalDiningIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} className='gourmet-gurus-text'
+                    />
                     <Typography
+                        className='gourmet-gurus-text'
                         variant="h5"
                         noWrap
                         component="a"
@@ -119,7 +123,7 @@ function ResponsiveAppBar() {
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
-                            fontFamily: 'monospace',
+                            fontFamily: 'Italiana',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
                             color: 'inherit',
@@ -135,20 +139,19 @@ function ResponsiveAppBar() {
 
                     <Link href={'/bookmarks'}>
                         <Tooltip title='Bookmarks'>
-                            <BookmarksIcon className='mr-5' />
-
+                            <BookmarksIcon className='mr-2 pl-0 gourmet-gurus-text' />
                         </Tooltip>
                     </Link>
                     <Link href={'/cart'}>
                         <Tooltip title='Cart'>
-                            <ShoppingCartIcon className='mr-5' />
+                            <ShoppingCartIcon className='mr-2 gourmet-gurus-text' />
                         </Tooltip>
                     </Link>
 
                     {(isUserLoggedIn) ? (
                         <Link href={'/logout'}>
                             <Tooltip title="Logout">
-                                <LogoutIcon onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <LogoutIcon onClick={handleOpenUserMenu} sx={{ p: 0 }} className='gourmet-gurus-text'>
                                 </LogoutIcon>
                             </Tooltip>
                         </Link>
@@ -168,4 +171,3 @@ function ResponsiveAppBar() {
         </AppBar >
     );
 }
-export default ResponsiveAppBar;
