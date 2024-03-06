@@ -11,26 +11,7 @@ const Page = () => {
             </header>
             <div className="food-cards-container">
                 <FoodItemCard isReadOnly={false} id={'lemon'} img='https://www.marionskitchen.com/wp-content/uploads/2019/09/Chinese-BBQ-Pork-Steamed-Buns4.jpg' name='Steamed Pork Buns' />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
-                <FoodItemCard isReadOnly={false} />
+
             </div>
         </div>
     )

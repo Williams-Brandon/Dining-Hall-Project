@@ -16,7 +16,7 @@ function page() {
                 </div>
 
                 <div style={styles.teamMember}>
-                    <h2><b>Mike Min</b></h2>
+                    <h2><b>Sungwoo Min</b></h2>
                     <p>
                         - 4th Year Computer Science Major
                     </p>

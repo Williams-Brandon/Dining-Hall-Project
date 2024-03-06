@@ -21,12 +21,11 @@ export default function Home() {
     return 'Brandon';
   }
   const getRating = () => {
-    return (Math.random() * 5) + 1;
+    return (Math.random() * 2) + 3;
   }
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen">
-
       <header className="text-center py-4">
         <h1 className="text-2xl" style={{ fontFamily: 'Almendra', fontSize: '30px', fontWeight: '450' }}>{getGreeting()}, {getUsername()}</h1>
       </header>

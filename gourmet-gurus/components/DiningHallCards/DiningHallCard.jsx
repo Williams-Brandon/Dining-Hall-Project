@@ -11,12 +11,6 @@ import Link from 'next/link'; // Import Link from next/link
 import Tooltip from '@mui/material/Tooltip';
 import Paper from '@mui/material/Paper';
 
-
-
-
-
-
-
 const images = ['https://i.imgur.com/DHqDadL.jpeg', 'https://i.imgur.com/bcch0Cc.jpeg', 'https://i.imgur.com/Q0JMbbl.jpeg', 'https://i.imgur.com/tvBFfbL.jpeg'];
 
 export default function DiningHallCard({ name, image, id, rating }) {

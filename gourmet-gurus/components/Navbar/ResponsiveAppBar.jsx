@@ -20,6 +20,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Link from 'next/link'
 import Badge from '@mui/material/Badge';
 import '@fontsource-variable/noto-sans-lisu';
+import { useSession, signIn, signOut } from "next-auth/react"
 
 
 
@@ -28,9 +29,10 @@ import '@fontsource-variable/noto-sans-lisu';
 
 const pages = ['About', 'Favorites', 'Cart'];
 const settings = ['Profile', 'Logout'];
-const isUserLoggedIn = true;
+const isUserLoggedIn = false;
 
 export default function ResponsiveAppBar() {
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -151,14 +153,14 @@ export default function ResponsiveAppBar() {
                     {(isUserLoggedIn) ? (
                         <Link href={'/logout'}>
                             <Tooltip title="Logout">
-                                <LogoutIcon onClick={handleOpenUserMenu} sx={{ p: 0 }} className='gourmet-gurus-text'>
+                                <LogoutIcon onClick={() => { }} sx={{ p: 0 }} className='gourmet-gurus-text'>
                                 </LogoutIcon>
                             </Tooltip>
                         </Link>
                     ) : (
                         <Link href={'/login'}>
                             <Tooltip title="Login">
-                                <LoginIcon onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <LoginIcon onClick={() => { }} sx={{ p: 0 }} className='gourmet-gurus-text'>
                                 </LoginIcon>
                             </Tooltip>
                         </Link>
